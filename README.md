@@ -1,33 +1,22 @@
 # SPGPS — Smart Public Grievance Prioritization System
 
-> **Next-Generation AI-Driven Municipal Governance & Civic Grievance Triage Platform**  
-> Powered by Google Gemini 3.7 Flash, React 18, TypeScript, Tailwind CSS, and Express.
+The **Smart Public Grievance Prioritization System (SPGPS)** is a municipal governance and citizen service platform that automates civic grievance submission, triage, prioritization, dispatch, and lifecycle tracking.
 
 ---
 
-## 🏛️ Executive Overview
+## What the Application Does
 
-The **Smart Public Grievance Prioritization System (SPGPS)** modernizes municipal grievance resolution by replacing slow, manual citizen service desks with an automated, AI-powered triage and dispatch pipeline. 
-
-Using **Google Gemini 3.7 Flash**, the system automatically analyzes citizen problem descriptions and photo evidence in real-time, categorizes complaints across 12 municipal domains, scores urgency on a weighted 1–5 scale, computes sentiment distress, calculates Service Level Agreement (SLA) deadlines, and routes tickets directly to local field engineering teams with exact GPS coordinates.
-
----
-
-## ✨ Key Features
-
-### 👤 Citizen Experience
-- **Instant Grievance Ingestion**: Clean, responsive reporting interface with pre-built incident quick-templates (e.g., *Dangerous Pothole*, *Live Exposed Power Line*, *Sewage Overflow*, *Flooded Drain*).
-- **Geolocation & Coordinate Pinning**: One-tap browser GPS detection and address lookup for precise field crew dispatch.
-- **Photo Evidence Attachment**: Upload or drag-and-drop on-site photos of infrastructure damage.
-- **Real-Time 5-Step Lifecycle Tracker**: Live animated timeline with status updates (`Submitted` ➔ `Under Review` ➔ `Assigned` ➔ `In Progress` ➔ `Resolved` / `Escalated`).
-- **Assigned Field Officer Card**: Direct contact details (Officer Name, Badge/Role, Official Phone, and Email) for accountability.
-- **24-Hour Self-Cancellation Grace Window**: Citizens can modify or withdraw tickets submitted by mistake within 24 hours of submission.
-- **Interactive OpenStreetMap Routing**: Visualizes the incident site relative to the responsible municipal department depot with driving routes.
+### 1. Citizen Grievance Reporting
+- **Incident Submission**: Citizens can lodge civic complaints regarding municipal issues with detailed descriptions.
+- **Incident Quick-Templates**: One-click preset incident types (e.g., *Dangerous Pothole*, *Live Exposed Power Line*, *Sewage Overflow*, *Flooded Storm Drain*) to rapidly file common issues.
+- **GPS Location Capture**: Automatic device location detection and address lookup to pinpoint the exact site of civic defects.
+- **Photo Evidence Attachment**: Citizens can attach photos of on-site damage or hazards.
+- **Instant Tracking ID**: Generates a unique tracking reference code upon submission for ongoing status tracking.
 
 ---
 
-### 🧠 Gemini 3.7 Flash AI Triage Engine
-- **Multi-Domain Taxonomy Classification**: Automatically classifies complaints into 12 civic departments:
+### 2. Automated Complaint Triage & Prioritization
+- **Departmental Routing**: Automatically determines the responsible civic department across 12 municipal sectors:
   - Roads & Infrastructure
   - Water & Sewage Management
   - Stormwater & Drainage
@@ -40,107 +29,50 @@ Using **Google Gemini 3.7 Flash**, the system automatically analyzes citizen pro
   - Municipal Schools & Centers
   - Transit & Public Mobility
   - General Civic Services
-- **Urgency Scoring Matrix (1–5)**:
-  - `Critical (5)`: Immediate danger to human life or major city disruption (SLA: 24–48 hours)
-  - `High (4)`: Severe infrastructure outage or health hazard (SLA: 2–3 days)
-  - `Medium (3)`: Routine neighborhood repairs and servicing (SLA: 4–7 days)
-  - `Low (1-2)`: Cosmetic issues and general inquiries (SLA: 7–14 days)
-- **Distress & Sentiment Extraction**: Evaluates emotional tone and public urgency (1–10).
-- **Predictive SLA Target Computation**: Dynamically calculates days to resolution based on severity and departmental capacity.
-- **Transparent Reasoning Logs**: Provides human-readable explanations of why the AI assigned a specific department and urgency score.
+- **Urgency Scoring (1 to 5)**:
+  - **Critical (5)**: Immediate threat to public safety or major infrastructure disruption.
+  - **High (4)**: Severe localized service outage or health hazard.
+  - **Medium (3)**: Routine maintenance, repairs, or service requests.
+  - **Low (1–2)**: Minor cosmetic issues and general inquiries.
+- **SLA Resolution Prediction**: Automatically computes expected resolution timeframes and target completion dates based on issue severity and departmental workload.
+- **Distress Assessment**: Evaluates citizen sentiment and public impact to prioritize urgent community needs.
+- **Audit Reasoning Logs**: Generates transparent diagnostic logs explaining classification decisions and recommended actions.
 
 ---
 
-### 📊 Municipal Admin Command & Operations Center
-- **Executive KPI Dashboard**: Live metrics for Total Grievances, Critical Priority Queue, Verified Resolution Rate, Pending Caseload, and SLA Violations.
-- **Jurisdictional Density Heatmap**: Interactive visual map breaking down grievances and critical incidents across urban zones (North, South, East, West, Central, Metro Suburbs).
-- **Interactive Analytics (Recharts)**:
-  - Departmental distribution charts
-  - Urgency level breakdown
-  - Trend indicators and resolution ratios
-- **Priority Emergency Action Queue**: High-visibility alert strip highlighting critical safety tickets requiring immediate field dispatch.
-- **Full Case Lifecycle Management**:
-  - Update progress status (`under_review`, `assigned`, `in_progress`, `resolved`, `closed`, `escalated`)
-  - Assign specific field supervisors and engineers
-  - Record audit logs and post-resolution notes
-- **Automated SLA Audit Detector**: Background routine to audit active cases, detect deadline overruns, and escalate tickets to senior supervision.
+### 3. Real-Time Grievance Tracking
+- **5-Step Lifecycle Timeline**: Visual progress tracker showing the grievance moving through all operational stages:
+  1. *Submitted*
+  2. *Under Review*
+  3. *Officer Assigned*
+  4. *In Progress / Field Work*
+  5. *Resolved & Verified* (or *Escalated*)
+- **Officer Accountability Card**: Displays the assigned field officer's name, designation, official phone number, and email address.
+- **SLA Overdue Alerts**: Highlights cases that have exceeded their target resolution window with urgent escalation notices.
+- **Depot & Incident Map**: Displays an interactive map showing the location of the incident alongside the responsible municipal depot and dispatch routes.
+- **24-Hour Self-Cancellation Window**: Allows citizens to withdraw or cancel erroneously submitted complaints within 24 hours.
 
 ---
 
-## 🛠️ Technology Stack
-
-| Layer | Technologies |
-| :--- | :--- |
-| **Frontend Framework** | React 18, TypeScript, Vite |
-| **Styling & Design** | Tailwind CSS, Lucide React, Glassmorphism UI tokens |
-| **Animations & 3D** | Motion (Framer Motion), Three.js (interactive 3D torus canvas) |
-| **Charts & Visualizations** | Recharts, Leaflet / OpenStreetMap |
-| **Backend Runtime** | Node.js, Express, TypeScript (`tsx` / `esbuild`) |
-| **Artificial Intelligence** | `@google/genai` (Google Gemini 3.7 Flash) |
-| **State & Notifications** | React Hooks, Local Storage, Sonner Toast Notifications |
+### 4. Citizen Complaint History ("My Complaints")
+- **Personalized Registry**: Lists all grievances filed by the citizen.
+- **Status & Urgency Badges**: Quick view of active, resolved, or escalated complaints.
+- **Direct Navigation**: Instant access to detailed tracking pages and resolution notes.
 
 ---
 
-## 📡 REST API Reference
-
-### Complaints API
-- `POST /api/complaints` — Submit a new grievance and execute the Gemini AI triage pipeline.
-- `GET /api/complaints` — Fetch all registered grievances (supports optional search and filter parameters).
-- `GET /api/complaints/:id` — Retrieve comprehensive details for a specific tracking ID (including timeline, officer info, and AI reasoning).
-- `PUT /api/complaints/:id` — Update case status, assign field personnel, and attach resolution notes.
-- `DELETE /api/complaints/:id` — Withdraw/cancel a grievance within the 24-hour window.
-
-### Analytics & System API
-- `GET /api/kpis` — Aggregate citywide metrics, category statistics, urgency distributions, and district counts.
-- `POST /api/simulate/check-overdue` — Trigger an automated SLA audit to flag and escalate overdue cases.
-- `GET /api/departments` — List municipal departments, contact officers, and geographic depots.
-
----
-
-## 🚀 Getting Started & Local Setup
-
-### Prerequisites
-- Node.js (v18.x or later)
-- npm or yarn
-- Gemini API Key (set in `.env` as `GEMINI_API_KEY`)
-
-### Installation
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-org/spgps-municipal-system.git
-cd spgps-municipal-system
-
-# 2. Install dependencies
-npm install
-
-# 3. Configure environment variables
-cp .env.example .env
-# Edit .env and supply your GEMINI_API_KEY
-
-# 4. Start development server
-npm run dev
-```
-
-The application will be accessible at `http://localhost:3000`.
-
-### Production Build
-```bash
-# Build frontend and bundle server
-npm run build
-
-# Start production server
-npm start
-```
-
----
-
-## 👥 Role-Based Access Demo
-
-The portal includes an instant role toggle in the navigation bar to test both perspectives:
-- **Citizen Mode (`Chandana Kumar`)**: Access the submission portal, track filed grievances via tracking ID, and view personalized complaint history.
-- **Admin Mode (`Admin Olivia Taylor`)**: Access the Command Center, monitor citywide KPIs, assign field engineers, run SLA audits, and update ticket states.
-
----
-
-## 📄 License
-This project is licensed under the MIT License.
+### 5. Municipal Admin Command Center
+- **Key Performance Indicators (KPIs)**: Real-time citywide statistics for:
+  - Total registered grievances
+  - High-priority and critical action queue
+  - Verified resolution rate percentage
+  - Pending and in-review cases
+  - SLA overdue violations
+- **Jurisdictional Heatmap**: Visual breakdown of complaint density and critical issues across city districts (North, South, East, West, Central, Suburbs).
+- **Analytics Charts**: Category-wise distribution breakdown and urgency tier distribution graphs.
+- **Emergency Priority Queue**: Dedicated urgent action banner highlighting high-severity safety hazards for rapid dispatch.
+- **Case Lifecycle Management**:
+  - Update complaint status across all lifecycle stages
+  - Assign or reassign field officers and maintenance personnel
+  - Record detailed field inspection and resolution notes
+- **Automated SLA Audit Scanner**: Scans database for overdue grievances and triggers automatic escalations to supervisory leadership.
