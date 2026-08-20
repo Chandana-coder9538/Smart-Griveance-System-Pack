@@ -1,6 +1,10 @@
 {
   "name": "SPGPS — Smart Public Grievance Prioritization System",
   "description": "AI-powered public grievance management and prioritization system with automated categorization, urgency scoring, smart department routing, citizen tracking, and municipal admin command center.",
-  "requestFramePermissions": ["geolocation"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
